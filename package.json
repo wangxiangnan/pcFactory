@@ -1,0 +1,33 @@
+{
+  "name": "pc-factory",
+  "version": "1.0.0",
+  "description": "pc多个页面",
+  "private": true,
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wangxiangnan/pcFactory.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wangxiangnan/pcFactory/issues"
+  },
+  "homepage": "https://github.com/wangxiangnan/pcFactory#readme",
+  "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-connect": "^5.7.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "node-sass": "^4.13.1"
+  }
+}
