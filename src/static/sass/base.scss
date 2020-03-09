@@ -1,5 +1,14 @@
+// style初始化和组件的样式 bem block-element-modify
 $color: #f00;
 h1{
     color: $color;
     border-radius: 30px;
 }
+
+// footer组件
+.footer {
+    &__title {
+
+    }
+}
+// header组件

@@ -5,6 +5,8 @@ const gulpBabel = require('gulp-babel');
 const gulpJs = require('gulp-uglify');
 const gulpImagemin = require('gulp-imagemin');
 const gulpConnect = require('gulp-connect');
+const htmltpl = require('gulp-html-tpl');     // 引用html模板
+const artTemplate = require('art-template');  // 模板渲染
 
 function createServer(cb) {
     gulpConnect.server({
@@ -16,6 +18,17 @@ function createServer(cb) {
 
 function handleHtml() {
     return src('./src/*.html')
+        .pipe(htmltpl({
+            tag: 'template',
+            paths: ['./src/template'],
+            engine: function(template, data) {
+                return template && artTemplate.compile(template)(data);
+            },
+            data: {      //初始化数据
+                header: false,
+                g2: false
+            }
+        }))
         .pipe(gulpHtmlmin({
             removeTagWhitespace: true,
             removeComments: true,
