@@ -63,7 +63,7 @@ function handleJs() {
 }
 
 function handleImage() {
-    return src('./src/static/images/*.*')
+    return src('./src/static/images/**/*.*')
     .pipe(gulpImagemin({
         optimizationLevel: 5, //类型：Number 默认：5 取值范围：0-7（优化等级）
         progressive: true, //类型：Boolean 默认：false 无损压缩jpg图片
